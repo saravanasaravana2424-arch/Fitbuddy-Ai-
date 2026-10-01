@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBuddy - AI Fitness Planner</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #d4fc79, #96e6a1);
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #218838;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 7px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        .admin {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>FitBuddy 💪</h1>
+    <p>AI Fitness Plan Generator using Gemini Models</p>
+
+    <form action="/generate" method="post">
+
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+
+        <label>Age</label>
+        <input type="number" name="age" min="13" max="100" required>
+
+        <label>Fitness Level</label>
+        <select name="fitness_level" required>
+            <option value="">Select Level</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+
+        <label>Fitness Goal</label>
+        <select name="goal" required>
+            <option value="">Select Goal</option>
+            <option value="General Fitness">General Fitness</option>
+            <option value="Strength">Strength</option>
+            <option value="Flexibility">Flexibility</option>
+            <option value="Endurance">Endurance</option>
+        </select>
+
+        <button type="submit">Generate My Fitness Plan</button>
+
+    </form>
+
+    <a class="admin" href="/all-users">View Admin Panel</a>
+<a class="admin" href="/dashboard">View Dashboard</a>
+</div>
+
+</body>
+</html>

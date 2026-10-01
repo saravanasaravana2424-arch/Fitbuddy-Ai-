@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FitBuddy Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card {
+            background: #e4f8e8;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        h1 {
+            color: #218838;
+        }
+
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 20px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+        }
+
+        a:hover {
+            background: #218838;
+        }
+
+        .profile {
+            background: #007bff;
+        }
+
+        .profile:hover {
+            background: #0056b3;
+        }
+
+        .docs {
+            background: #6f42c1;
+        }
+
+        .docs:hover {
+            background: #59359c;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>FitBuddy Dashboard 💪</h1>
+
+    <p>Welcome to your AI Fitness Planner</p>
+
+    <div class="card">
+        <h2>Total Registered Users</h2>
+        <h1>{{ total_users }}</h1>
+    </div>
+
+    <a href="/">Generate Fitness Plan</a>
+
+    <a href="/all-users">Admin Panel</a>
+
+    <a href="/profile/1" class="profile">View User Profile</a>
+
+    <a href="/docs" class="docs" target="_blank">
+        Open FastAPI Documentation
+    </a>
+
+</div>
+
+</body>
+</html>

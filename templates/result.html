@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FitBuddy - Fitness Plan</title>
+</head>
+<body>
+
+<h1>FitBuddy</h1>
+
+<h2>Your Fitness Plan Request</h2>
+
+<p><strong>Name:</strong> {{ name }}</p>
+<p><strong>Age:</strong> {{ age }}</p>
+<p><strong>Fitness Level:</strong> {{ fitness_level }}</p>
+<p><strong>Fitness Goal:</strong> {{ goal }}</p>
+
+<h2>AI Fitness Plan</h2>
+
+<pre>{{ plan }}</pre>
+
+<h2>Nutrition / Recovery Tip</h2>
+
+<pre>{{ nutrition_tip }}</pre>
+
+<br>
+
+<a href="/">← Back to FitBuddy</a>
+<hr>
+
+<h2>Download Your Fitness Plan</h2>
+
+<form action="/download-plan" method="get">
+    <input type="hidden" name="name" value="{{ name }}">
+    <input type="hidden" name="age" value="{{ age }}">
+    <input type="hidden" name="fitness_level" value="{{ fitness_level }}">
+    <input type="hidden" name="goal" value="{{ goal }}">
+    <input type="hidden" name="plan" value="{{ plan }}">
+
+    <button type="submit">Download Fitness Plan</button>
+</form>
+
+<br>
+<a href="/">Back to Home</a>
+</body>
+<hr>
+
+<h2>Share Your Feedback</h2>
+
+<form action="/feedback" method="post">
+
+    <input type="hidden" name="name" value="{{ name }}">
+
+    <label>How was your fitness plan?</label>
+    <br>
+
+    <select name="feedback" required>
+        <option value="">Select Feedback</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Very Good">Very Good</option>
+        <option value="Good">Good</option>
+        <option value="Needs Improvement">Needs Improvement</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Submit Feedback</button>
+
+</form>
+
+<br>
+
+<a href="/">Back to Home</a>
+</html>
